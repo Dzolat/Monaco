@@ -2470,7 +2470,7 @@ function loadTabs() {
         }
 
         function addTab(title, content = '', id = null) {
-    const defaultText = "print(\"RealDzolat\")";    
+    const defaultText = "print(\"Hello World!\")";   
     if (!content) {
         content = defaultText;
     }
@@ -2533,7 +2533,7 @@ function switchTab(tabId) {
             }
         }
         
-        const contentToSet = tab.content.trim() === '' ? "--[[ Made by Salad\n    discord.gg/getsalad\n ]]" : tab.content;        editor.setValue(contentToSet);
+        const contentToSet = tab.content.trim() === '' ? "print(\"Hello World!\")" : tab.content;        editor.setValue(contentToSet);
         tab.element.classList.add('active');
         currentTab = tabId;
     }
@@ -2555,7 +2555,6 @@ function setupAutosave() {
     });
 }
 
-
     var enableAntiSkid;
     var disableAntiSkid;
 		var SetText;
@@ -2567,7 +2566,6 @@ function setupAutosave() {
 		var AddIntellisense;
 		var Refresh;
 	
-
 
 		require(['vs/editor/editor.main'], function () {
 			function getDependencyProposals() {
@@ -2586,11 +2584,11 @@ function setupAutosave() {
 				base: 'vs-dark',
 				inherit: true,
 				colors: {
-					"editor.background": '#141414', //ur background color
+					"editor.background": '#141414', 
 				},
 				rules: [{
 						token: 'global',
-						foreground: '6699cc', // //FFFFFF
+						foreground: '6699cc', 
 						fontStyle: "bold"
 					},
 					{
